@@ -1,30 +1,5 @@
 import { Pressable } from 'react-native';
 
-interface Props {
-  label: string;
-}
-
-const CalculatorButton = ({ label }: Props) => {
-  return (
-    <Pressable>
-      <Text style={{ color: 'white' }}>{label}</Text>
-    </Pressable>
-  );
-};
-const CalculatorButton = ({ label }: Props) => {
-  return (
-    <Pressable style={globalStyles.button}>
-      <Text style={globalStyles.buttonText}>{label}</Text>
-    </Pressable>
-  )
-}
-interface Props {
-  label: string;
-  color?: string;
-  blackText?: boolean;
-  onPress: () => void;
-}
-
 const CalculatorButton = ({
   label,
   color = Colors.darkGray,
@@ -32,13 +7,15 @@ const CalculatorButton = ({
   onPress,
 }: Props) => {
   return (
-    <Pressable style={globalStyles.button}>
-      <Text
-        style={{
-          ...globalStyles.buttonText,
-          color: blackText ? 'black': 'white',
-        }}
-      >{label}</Text>
+    <Pressable
+      style={({ pressed}) => ({
+        ...globalStyles.button,
+        backgroundColor: color,
+        opacity: pressed ? 0.8 : 1,
+      })}
+      onPress={onPress}
+    >
+      ...
     </Pressable>
   )
 }

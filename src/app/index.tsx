@@ -7,10 +7,12 @@ const CalculatorApp = () => {
       {/* Filas de botones */}
       <View style={globalStyles.row}>
         {/* Botón 1 */}
-        <CalculatorButton label="C" blackText color={Colors.lightGray} onPress={() => console.log('C')} />
-        <CalculatorButton label="+/-" blackText color={Colors.lightGray} onPress={() => console.log('+/-')} />
-        <CalculatorButton label="del" blackText color={Colors.lightGray} onPress={() => console.log('del')} />
-        <CalculatorButton label="÷" blackText color={Colors.lightGray} onPress={() => console.log('÷')} />
+        ...
+        <CalculatorButton
+          label="÷"
+          color={Colors.orange}
+          onPress={() => console.log('÷')}
+        />
       </View>
     </View>
   );
