@@ -12,7 +12,7 @@ const RootLayout = () => {
   }
 
   return (
-    <View style={{ backgroundColor: Colors.background, flex: 1 }}>
+    <View style={globalStyles.background}>
       <Slot />
 
       <StatusBar style="light" />
