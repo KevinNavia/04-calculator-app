@@ -1,12 +1,10 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 const CalculatorApp = () => {
   return (
     <View style={globalStyles.calculatorContainer}>
-      <Text style={globalStyles.mainResult} numberOfLines={1} adjustsFontSizeToFit>
-        50 x 500000000000000
-      </Text>
-      <Text style={globalStyles.subResult}>2500</Text>
+      <ThemeText variant="h1">50 x 500000000000000</ThemeText>
+      <ThemeText variant="h2">2500</ThemeText>
     </View>
   );
 };
