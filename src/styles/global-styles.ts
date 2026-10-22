@@ -7,14 +7,28 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
   },
   calculatorContainer: {
+    alignSelf: 'center',
+    flex: 1,
+    maxWidth: 440,
+    justifyContent: 'flex-end',
+    paddingBottom: 12,
+    width: '100%',
+  },
+  displayContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-    paddingBottom: 20,
+    paddingBottom: 24,
+    paddingHorizontal: 24,
+  },
+  keypad: {
+    alignSelf: 'center',
+    maxWidth: 400,
+    width: '100%',
   },
 
   mainResult: {
     color: Colors.textPrimary,
-    fontSize: 70,
+    fontSize: 72,
     textAlign: 'right',
     fontWeight: '400',
   },
@@ -25,28 +39,37 @@ export const globalStyles = StyleSheet.create({
     textAlign: 'right',
     fontWeight: '300',
   },
-    row: {
+  row: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginBottom: 18,
-    paddingHorizontal: 10,
+    gap: 12,
+    height: 72,
+    marginBottom: 12,
+    paddingHorizontal: 20,
+  },
   button: {
-    height: 80,
-    width: 80,
+    flex: 1,
     backgroundColor: Colors.darkGray,
-    borderRadius: 100,
+    borderRadius: 999,
     justifyContent: 'center',
-    marginHorizontal: 10,
+    alignItems: 'center',
+  },
+  wideButton: {
+    flex: 2,
+    alignItems: 'flex-start',
+    paddingLeft: 28,
+  },
+  buttonPressed: {
+    opacity: 0.75,
   },
 
   buttonText: {
     textAlign: 'center',
-    padding: 10,
     fontSize: 30,
     color: Colors.textPrimary,
     fontWeight: '300',
     fontFamily: 'SpaceMono',
-  }
+  },
+  darkButtonText: {
+    color: Colors.background,
+  },
 });
-
-
